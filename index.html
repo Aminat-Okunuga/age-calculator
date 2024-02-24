@@ -17,7 +17,7 @@
             <h1><i>MeenatCodes</i> <br><span>Age Calculator</span></h1>
             <div class="input-box">
                 <input type="date" id="date">
-                <button>Calculate</button>
+                <button onclick="calculateAge()">Calculate</button>
             </div>
         </div>        
     </div>
@@ -27,6 +27,17 @@
         let userInput = document.getElementById("date");
         // To select only current and previous dates
         userInput.max = new Date().toISOString().split("T")[0];
+        
+        // calculate age functionality
+        function calculateAge(){
+          let birtDate = new Date(userInput.value);
+          let d1 = birthDate.getDate(); 
+          let m1 = birthDate.getMonth(); 
+          let y1 = birthDate.getFullYear();
+
+          let today = new Date();
+          
+        }
     </script>
 </body>
 </html>
